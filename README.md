@@ -58,7 +58,7 @@ job-tracker/
 ```bash
 ## 1. Clone the repository.
 
-git clone https://github.com/punch2dface/job-tracker.git
+git clone https://github.com/punch2dface/Job-Application-Tracker.git
 cd job-tracker
 
 ## 2. Install frontend dependencies.
