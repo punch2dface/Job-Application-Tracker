@@ -6,7 +6,10 @@ A full-stack job application tracking app built with React, Node.js, Express, an
 
 ## Live Demo
 
-[url](https://job-application-tracker-afqscddnv-punch2dfaces-projects.vercel.app/)
+Frontend: https://job-application-tracker-rho-green.vercel.app
+
+Backend API: https://job-application-tracker-api-hkxo.onrender.com
+⚠️ Note: The backend is hosted on Render's free tier and may take a few seconds to wake up on first load.
 
 ## Features
 
@@ -28,8 +31,14 @@ A full-stack job application tracking app built with React, Node.js, Express, an
 ### Backend
 - Node.js
 - Express
+
+### Database
 - MongoDB
 - Mongoose
+
+### Deployment
+- Vercel (frontend)
+- Render (backend)
 
 ## Project Structure
 
@@ -51,10 +60,10 @@ job-tracker/
 ### Editing a Job
 ![Edit Job](./screenshots/edit_job.png)
 
-### Filtering Jobs.
+### Filtering Jobs
 ![Filter Job](./screenshots/filter_job.png)
 
-## Getting Started
+## How To Run Locally
 
 ```bash
 ## 1. Clone the repository.
@@ -62,29 +71,28 @@ job-tracker/
 git clone https://github.com/punch2dface/Job-Application-Tracker.git
 cd job-tracker
 
-## 2. Install frontend dependencies.
+## 2. Install dependencies.
 
-cd client
-npm install
+cd client && npm install
+cd server && npm install
 
-## 3. Install backend dependencies
-
-cd ../server
-npm install
-
-## 4. Set up backend environemtn variables
+## 3. Set up backend environment variables
 
 ### Create a .env file inside the server folder and add:
 
 MONGODB_URI=your_mongodb_connection_string
 PORT=5000
 
-## 5. Start the backend server
+### Create a `.env` file inside the client folder and add:
+
+VITE_API_URL=http://localhost:5000
+
+## 4. Start the backend server
 
 cd server
 npm start
 
-## 6. Start the frontend app
+## 5. Start the frontend app
 
 ### Open a second terminal:
 
@@ -124,5 +132,4 @@ This project helped me practice:
 
 ## Please Note
 
-This project uses a shared MongoDB database. 
-All users interact with the same dataset, so entries may persist between sessions.
+This project uses a shared MongoDB database. All users interact with the same dataset, so entries may persist between sessions. Authentication is not implemented in this version.
