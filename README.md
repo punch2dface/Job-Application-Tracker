@@ -9,6 +9,7 @@ A full-stack job application tracking app built with React, Node.js, Express, an
 Frontend: https://job-application-tracker-rho-green.vercel.app
 
 Backend API: https://job-application-tracker-api-hkxo.onrender.com
+
 ⚠️ Note: The backend is hosted on Render's free tier and may take a few seconds to wake up on first load.
 
 ## Features
