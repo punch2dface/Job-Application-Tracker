@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: block; /* important */
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+#root {
+  width: 100%;
+}
