@@ -120,3 +120,8 @@ This project helped me practice:
 - Add sorting by date or company
 - Add status badges with custom colors
 - Improve mobile responsiveness further
+
+## Please Note
+
+This project uses a shared MongoDB database. 
+All users interact with the same dataset, so entries may persist between sessions.
