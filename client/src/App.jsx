@@ -5,6 +5,8 @@ import FilterBar from "./components/FilterBar";
 import JobList from "./components/JobList";
 
 function App() {
+
+  const API_URL = import.meta.env.VITE_API_URL;
   
   // Stores all job applications returned from the backend.
   const [jobs, setJobs] = useState([]);
@@ -35,7 +37,7 @@ function App() {
       setLoading(true);
       setError("");
 
-      const response = await fetch("http://localhost:5000/jobs");
+      const response = await fetch(`${API_URL}/jobs`);
       const data = await response.json();
 
       if (!response.ok) {
@@ -85,8 +87,8 @@ function App() {
 
       const isEditing = Boolean(editJobId);
       const url = isEditing
-        ? `http://localhost:5000/jobs/${editJobId}`
-        : "http://localhost:5000/jobs";
+        ? `${API_URL}/jobs/${editJobId}`
+        : `${API_URL}/jobs`;
 
       const method = isEditing ? "PUT" : "POST";
 
@@ -132,7 +134,7 @@ function App() {
     try {
       setError("");
 
-      const response = await fetch(`http://localhost:5000/jobs/${id}`, {
+      const response = await fetch(`${API_URL}/jobs/${id}`, {
         method: "DELETE",
       });
 
